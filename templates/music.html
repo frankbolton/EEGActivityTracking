@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>music</title>
+    </head>
+
+    <body>
+        <h1>Music Task</h1>
+        <h2>Please listen to the song in the player</h2>
+        A soft and mellow ukulele track that would be great to use for a calm video or a video about cute things like babies or cat. <br>
+        <audio id="musicPlayer1" controls>
+                <source src="/static/bensound-cute.mp3" type="audio/mpeg">
+              Your browser does not support the audio element.
+              </audio>
+              <br/><br/>
+              Dowtown is a funk action track featuring electric guitars, a brass section, bass drums and electric piano.<br>
+    <audio id="musicPlayer2" controls>
+                    <source src="/static/bensound-downtown.mp3" type="audio/mpeg">
+                  Your browser does not support the audio element.
+                  </audio>
+                  <br/><br/>
+                  Nice retro track featuring drums, claps, piano, organ, acoustic and electric guitars and mellotron.<br>
+        <audio id   ="musicPlayer3" controls>
+                        <source src="/static/bensound-funday.mp3" type="audio/mpeg">
+                      Your browser does not support the audio element.
+                      </audio>
+                      <br/>
+              
+
+
+        "Music: www.bensound.com" 
+        "Royalty Free Music from Bensound"
+
+        <script>
+                //window.onfocus = function() {kaf()};
+                window.onblur = function() {kef()};
+                
+                function kaf() {
+                 document.getElementById('musicPlayer').play(); 
+                }
+                
+                function kef() {
+                 document.getElementById('musicPlayer1').pause(); 
+                 document.getElementById('musicPlayer2').pause(); 
+                 document.getElementById('musicPlayer3').pause(); 
+                }
+                
+            </script>
+        <script type="text/javascript" src="/static/logEvents.js"></script>
+    </body>        
+</html>
+        

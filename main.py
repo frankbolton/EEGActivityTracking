@@ -10,7 +10,7 @@ from tinydb import TinyDB
 
 #Conditionally import the Neurosteer logging tool. This allows for SW 
 # development without the EEG in use.
-nl = False
+nl = True
 creds =''
 bluetooth =''
 if (nl):
@@ -21,15 +21,42 @@ if (nl):
 app = Flask(__name__, static_url_path='/static')
 
 
+
+
 @app.route("/")
 def index():
-    return ("You are in the placeholder index page")
+    return render_template("index.html")
+
+
+@app.route("/read")
+def readview():
+    return render_template("read.html")
+
+@app.route("/nothing")
+def nothingview():
+    return render_template("nothing.html")
+
+@app.route("/game")
+def gameview():
+    return render_template("game.html")
+
+@app.route("/video")
+def videoview():
+    return render_template("video.html", videosrc="\static\Wallace.And.Gromit.In.A.Close.Shave.1995.720p.BluRay.H264.AAC-RARBG.mp4")
+
+@app.route("/music")
+def musicview():
+    return render_template("music.html", videosrc="\static\Wallace.And.Gromit.In.A.Close.Shave.1995.720p.BluRay.H264.AAC-RARBG.mp4")
 
 
 @app.route("/iproxy")
 def iproxy():
-        return render_template("iproxy.html")
+    return render_template("iproxy.html")
 
+
+@app.route("/iframetest")
+def iframetest():
+    return render_template("iframetest.html")
 
 
 

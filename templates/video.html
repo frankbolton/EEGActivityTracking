@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html> 
+
+
+
+<head> 
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" /> 
+<title>Video</title> 
+</head> 
+<body> 
+        <h1>Video watching</h1>
+        <h2>Please watch 1-3 minutes of this video before moving on. We'll ask you questions about it in the end.</h2>
+        
+        <video id="videoPlayer" width="1280" height="766" position="center" controls>
+                <source src={{videosrc}} type="video/mp4" />
+        
+                
+        </body>
+        <script type="text/javascript" >
+        //window.onfocus = function() {kaf()};
+        window.onblur = function() {kef()};
+        
+        function kaf() {
+         document.getElementById('videoPlayer').play(); 
+        }
+        
+        function kef() {
+         document.getElementById('videoPlayer').pause();
+        }
+        
+    </script>
+        <script type="text/javascript" src="/static/logEvents.js"></script>
+</html>

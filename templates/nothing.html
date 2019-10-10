@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Be Still</title>
+    </head>
+
+    <body>
+
+            <h1>Stillness</h1>
+            <h2>Please click your pointer on the picture and do nothing for 2 minutes</h2>
+            <object data="http://www.donothingfor2minutes.com/" width="900" height="600">
+                <embed src="http://www.donothingfor2minutes.com/" width="900" height="600"> </embed>
+                Error: Embedded data could not be displayed.
+            </object>    
+            <iframe width="1" height="1" src="https://www.youtube.com/embed/RDgqjBD4vZQ?autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+            <script>
+                    window.onfocus = function() {kaf()};
+                    window.onblur = function() {kef()};
+                    
+                    function kaf() {
+                     document.getElementById('videoPlayer').play(); 
+                    
+                    }
+                    
+                    function kef() {
+                     document.getElementById('videoPlayer').pause(); 
+                    }
+                    
+                </script>
+            </body>
+            <script type="text/javascript" src="/static/logEvents.js"></script>
+        
+        </html>
+        
